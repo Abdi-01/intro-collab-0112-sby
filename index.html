@@ -2,10 +2,27 @@
     // in develop branch
     // INTRO SET-UP
     // Tempat deklarasi variable
+    const data = [
+        {
+            name: "Jacket",
+            stock:2,
+            price: 300000,
+
+        }
+    ]
 
     // Tempat deklarasi function
+    const printData = ()=>{
+        let result = "";
+        data.forEach ((val, idx) =>{
+            result += `${idx +1}. ${val.name}, Stocknya: ${val.stock} Rp. ${val.price.toLocaleString("id")}`;
+        });
+        return result
+
+    }
 
     // 1. Fitur tambah data
 
     // 2. Fitur lihat data
+    alert(printData());
 </script>
